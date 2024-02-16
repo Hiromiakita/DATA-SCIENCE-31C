@@ -56,3 +56,27 @@ arbol.insert(2);
 
 console.log(arbol);
 
+
+// CAMPUS EJERCICIOS
+// 1.- Escribe una función que dados dos árboles binarios A y B, determine si son idénticos o no.
+
+function areIndenticalTrees(tree1, tree2) { // tree1 y tree2 son de tipo TreeNode
+    if (!tree1 && !tree2) return true;
+    if (!tree1 || !tree2) return false;
+
+    return (
+        tree1.value === tree2.value &&
+        areIndenticalTrees(tree1.left, tree2.left) &&
+        areIndenticalTrees(tree1.right, tree2.right)
+    )
+}
+
+const tree1 = new BinaryTree();
+tree1.insert(1)
+tree1.insert(10)
+
+const tree2 = new BinaryTree();
+tree2.insert(1)
+tree2.insert(10)
+
+console.log(areIndenticalTrees(tree1.root, tree2.root));
