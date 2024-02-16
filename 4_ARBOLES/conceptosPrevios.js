@@ -13,3 +13,30 @@ function factorial(n) {
 // ejemplo de uso:
 const numero = 6
 console.log(`El factorial de ${numero} es: ${factorial(numero)}`);
+
+
+// CALLBACK
+// es una funcion que pasa como paremetro a otra funcion
+
+function calcular(valor, callback) {
+
+  // codigo...
+  //callback(algo)
+}
+
+function operar(operacion, valor1, valor2) {
+  return operacion(valor1, valor2);
+}
+
+function sumar(valor1, valor2) {
+  return valor1 + valor2;
+}
+
+function resta(valor1, valor2) {
+  return valor1 - valor2
+}
+
+const resultado = operar(resta, 1, 4)
+console.log(resultado);
+
+// arr.find((elem) => elem.id === 8))
